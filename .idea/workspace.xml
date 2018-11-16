@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236d26f9-12fe-4f9e-925a-97e263084ea0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/dongqiudi.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/shili_matchs.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/crossOdds_web.py" afterPath="$PROJECT_DIR$/crossOdds_web.py" />
-      <change beforePath="$PROJECT_DIR$/static/layout.css" afterPath="$PROJECT_DIR$/static/layout.css" />
-      <change beforePath="$PROJECT_DIR$/templates/matchs.html" afterPath="$PROJECT_DIR$/templates/matchs.html" />
+      <change beforePath="$PROJECT_DIR$/templates/dongqiudi.html" afterPath="$PROJECT_DIR$/templates/dongqiudi.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +18,8 @@
       <file leaf-file-name="crossOdds_web.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crossOdds_web.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="248">
+              <caret line="40" column="84" lean-forward="true" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -33,8 +30,8 @@
       <file leaf-file-name="dongqiudi.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dongqiudi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="285">
+              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -43,7 +40,7 @@
       <file leaf-file-name="matchs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/matchs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
+            <state relative-caret-position="151">
               <caret line="45" column="39" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="45" selection-end-column="39" />
               <folding />
             </state>
@@ -658,7 +655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/matchs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
+        <state relative-caret-position="151">
           <caret line="45" column="39" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="45" selection-end-column="39" />
           <folding />
         </state>
@@ -666,16 +663,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dongqiudi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crossOdds_web.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="248">
+          <caret line="40" column="84" lean-forward="true" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>

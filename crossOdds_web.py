@@ -33,7 +33,7 @@ def index():
 
 @app.route('/dongqiudi/')
 def dongqiudi():
-    matchs = mongo_2.db.dongqiudi_player.find({'score': 'VS', 'support_direction': {'$ne': ''}, "match_day": {"$gt": "2018-11-15"}})
+    matchs = mongo_2.db.dongqiudi_player.find({'score': 'VS', 'support_direction': {'$ne': ''}, "match_day": {"$gt": "2018-11-15"}}).sort([('match_day', 1)])
     return render_template('dongqiudi.html', matchs=matchs)
 
 @app.route('/matchs/')
