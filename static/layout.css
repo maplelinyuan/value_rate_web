@@ -9,3 +9,6 @@ td{
     text-align: center;
     padding: 0px 8px;
 }
+td.red_tip{
+    background-color: red;
+}

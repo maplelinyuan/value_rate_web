@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+<table>
+<tbody>
+    <tr>
+        <th>ID</th>
+        <th>联赛</th>
+        <th>时间</th>
+        <th>主队</th>
+        <th>客队</th>
+        <th>主进球</th>
+        <th>主方差</th>
+        <th>客进球</th>
+        <th>客方差</th>
+        <th>支持方向</th>
+    </tr>
+{% for match in matchs %}
+    <tr>
+        <td >{{ match.match_id }}</td>
+        <td>{{ match.league_name }}</td>
+        <td>{{ match.state }}</td>
+        <td>{{ match.home_name }}</td>
+        <td>{{ match.away_name}}</td>
+{#        {% if match.home_unbiased_variance != 0%}#}
+{#        <td>{{ match.home_total_goal/(match.home_unbiased_variance**(1/3))}}</td>#}
+{#        {% else %}#}
+{#        <td></td>#}
+{#        {% endif %}#}
+        <td>{{ match.home_total_goal }}</td>
+        <td>{{ match.home_unbiased_variance}}</td>
+{#        {% if match.away_unbiased_variance != 0%}#}
+{#        <td>{{ match.away_total_goal/match.away_unbiased_variance**(1/3)}}</td>#}
+{#        {% else %}#}
+{#        <td></td>#}
+{#        {% endif %}#}
+        <td>{{ match.away_total_goal }}</td>
+        <td>{{ match.away_unbiased_variance}}</td>
+        <td>{{ match.support_direction}}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

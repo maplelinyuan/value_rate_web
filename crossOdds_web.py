@@ -15,18 +15,40 @@ app.config.update(
     MONGO_USERNAME='',
     MONGO_PASSWORD=''
 )
-
 mongo = PyMongo(app)
+
+app_2 = Flask('dongqiudi')
+app_2.debug = True
+app_2.config.from_object(configs)
+app_2.config.update(
+    MONGO_URI='mongodb://localhost:27019/player_analysis',
+    MONGO_USERNAME='',
+    MONGO_PASSWORD=''
+)
+mongo_2 = PyMongo(app_2)
 
 @app.route('/')
 def index():
     return Markup('<div>Hello %s</div>') % '<em>Flask</em>'
 
+@app.route('/dongqiudi/')
+def dongqiudi():
+    matchs = mongo_2.db.dongqiudi_player.find({'score': 'VS', 'support_direction': {'$ne': ''}, "match_day": {"$gt": "2018-11-15"}})
+    return render_template('dongqiudi.html', matchs=matchs)
+
 @app.route('/matchs/')
 def matchs():
     qi_shu = mongo.db.new_realtime_matchs.find().sort([('qi_shu', -1)])[0]['qi_shu']
+    # qi_shu = 181004
     matchs = mongo.db.new_realtime_matchs.find({'qi_shu': qi_shu}).sort([('match_time', 1)])
     return render_template('matchs.html', matchs=matchs)
+
+@app.route('/shili_matchs/')
+def shili_matchs():
+    qi_shu = mongo.db.shili_realtime_matchs.find().sort([('qi_shu', -1)])[0]['qi_shu']
+    # qi_shu = 180903
+    matchs = mongo.db.shili_realtime_matchs.find({'qi_shu': qi_shu}).sort([('match_time', 1)])
+    return render_template('shili_matchs.html', matchs=matchs)
 
 @app.errorhandler(404)
 def page_not_found(error):

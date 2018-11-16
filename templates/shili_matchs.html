@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+<table>
+<tbody>
+    <tr>
+        <th>联赛</th>
+        <th>时间</th>
+        <th>主队</th>
+        <th>客队</th>
+        <th>主赔</th>
+        <th>平赔</th>
+        <th>客赔</th>
+        <th>推荐方向</th>
+        <th>主进球</th>
+        <th>客进球</th>
+{#        <th>主乘积</th>#}
+    </tr>
+{% for match in matchs %}
+    <tr>
+        <td >{{ match.league_name }}</td>
+        <td>{{ match.match_time }}</td>
+        <td>{{ match.home_name }}</td>
+        <td>{{ match.away_name}}</td>
+        <td>{{ match.home_odd}}</td>
+        <td>{{ match.draw_odd}}</td>
+        <td>{{ match.away_odd}}</td>
+        <td>{{ match.support_direction}}</td>
+        <td>{{ match.home_goal}}</td>
+        <td>{{ match.away_goal}}</td>
+{#        {% if match.home_product >= 1 %}#}
+{#        <td class="red_tip">{{ match.home_product}}</td>#}
+{#        {% else %}#}
+{#        <td>{{ match.home_product}}</td>#}
+{#        {% endif %}#}
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

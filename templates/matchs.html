@@ -14,8 +14,20 @@
         <th>客赔</th>
         <th>身价比</th>
         <th>推荐方向</th>
+        <th>主初离散</th>
+        <th>平初离散</th>
+        <th>客初离散</th>
+        <th>主离散</th>
+        <th>平离散</th>
+        <th>客离散</th>
+        <th>主离散率</th>
+        <th>平离散率</th>
+        <th>客离散率</th>
+        <th>离散率推荐</th>
         <th>主进球</th>
         <th>客进球</th>
+        <th>当前利润</th>
+        {#        <th>主乘积</th>#}
     </tr>
 {% for match in matchs %}
     <tr>
@@ -28,10 +40,31 @@
         <td>{{ match.home_odd}}</td>
         <td>{{ match.draw_odd}}</td>
         <td>{{ match.away_odd}}</td>
+        {% if match.value_ratio != '' and match.value_ratio >= 10 %}
+        <td class="red_tip">{{ match.value_ratio}}</td>
+        {% else %}
         <td>{{ match.value_ratio}}</td>
+        {% endif %}
         <td>{{ match.support_direction}}</td>
+        <td>{{ match.home_origin_lisan}}</td>
+        <td>{{ match.draw_origin_lisan}}</td>
+        <td>{{ match.away_origin_lisan}}</td>
+        {#——————分割线——————#}
+        <td>{{ match.home_lisan}}</td>
+        <td>{{ match.draw_lisan}}</td>
+        <td>{{ match.away_lisan}}</td>
+        <td>{{ match.home_lisan_rate}}</td>
+        <td>{{ match.draw_lisan_rate}}</td>
+        <td>{{ match.away_lisan_rate}}</td>
+        <td>{{ match.lisan_support}}</td>
         <td>{{ match.home_goal}}</td>
         <td>{{ match.away_goal}}</td>
+        <td>{{ match.cur_profit}}</td>
+{#        {% if match.home_product >= 1 %}#}
+{#        <td class="red_tip">{{ match.home_product}}</td>#}
+{#        {% else %}#}
+{#        <td>{{ match.home_product}}</td>#}
+{#        {% endif %}#}
     </tr>
 {% endfor %}
 </tbody>
